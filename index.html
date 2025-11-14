@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SanjayDev • Full-Stack & AI Developer</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- AOS Animation Library -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">Sanjay<span>Dev</span></div>
+
+        <nav>
+            <a href="#hero">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#projects">Projects</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#contact">Contact</a>
+            <button id="themeToggle">🌙</button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-text" data-aos="fade-right">
+            <h1>Hi, I'm Sanjay — Full-Stack & AI Developer</h1>
+            <p>I build modern web apps, AI-powered tools, automation testing systems, and high-performance applications.</p>
+            <button class="btn-primary">Hire Me</button>
+        </div>
+
+        <div class="hero-img" data-aos="fade-left">
+            <img src="https://illustrations.popsy.co/blue/developer.svg" alt="Developer Illustration">
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <h2 data-aos="fade-up">About Me</h2>
+
+        <div class="about-container">
+            <img class="about-photo" src="images\3547121_Sanjay Rajput.jpg" alt="Sanjay Photo" data-aos="fade-right">
+
+            <div class="about-content" data-aos="fade-left">
+                <h3>Sanjay • Full-Stack & AI Engineer</h3>
+                <p>
+                    I’m Sanjay, a full-stack developer specializing in modern web applications, 
+                    AI solutions, automation testing, and high-performance systems.
+                    I build scalable digital products using clean architecture, modern frameworks, and intelligent automation.
+                </p>
+
+                <p>
+                    I love helping businesses automate workflows, improve performance, and build innovative AI-driven tools.
+                </p>
+
+                <button class="btn-primary">Download CV</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services" id="services">
+        <h2 data-aos="fade-up">Services</h2>
+
+        <div class="service-list">
+            <div class="service-card" data-aos="zoom-in">
+                <h3>Web Development</h3>
+                <p>Modern UI, responsive layouts, full-stack web apps angular & Node.js.</p>
+            </div>
+
+            <div class="service-card" data-aos="zoom-in" data-aos-delay="150">
+                <h3>AI & Automation</h3>
+                <p>Chatbots, automation scripts, scraping, ML integrations & workflow automation.</p>
+            </div>
+
+            <div class="service-card" data-aos="zoom-in" data-aos-delay="300">
+                <h3>Automation Testing</h3>
+                <p>Test automation using Selenium, Playwright, Cypress & CI/CD integration.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="projects" id="projects">
+        <h2 data-aos="fade-up">Projects</h2>
+
+        <div class="project-grid">
+
+            <div class="project-card" data-aos="fade-up">
+                <img src="https://illustrations.popsy.co/blue/dashboard.svg" alt="Project 1">
+                <h3>AI Dashboard</h3>
+                <p>Full-stack analytics dashboard with AI-powered insights and automation workflows.</p>
+            </div>
+
+            <div class="project-card" data-aos="fade-up" data-aos-delay="150">
+                <img src="https://illustrations.popsy.co/blue/website-layout.svg" alt="Project 2">
+                <h3>Modern Web App</h3>
+                <p>Angular & Node.js high-speed web application for business solutions.</p>
+            </div>
+
+            <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                <img src="https://illustrations.popsy.co/blue/robot.svg" alt="Project 3">
+                <h3>Automation Bot</h3>
+                <p>Python bot to automate workflows, scraping, and repetitive tasks.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="reviews" id="reviews">
+        <h2 data-aos="fade-up">Client Reviews</h2>
+
+        <div class="review-list">
+
+            <div class="review-card" data-aos="fade-up">
+                <p>“Sanjay delivered above expectations. His automation script saved us hours every week.”</p>
+                <h4>— Priya Sharma, Product Manager</h4>
+            </div>
+
+            <div class="review-card" data-aos="fade-up" data-aos-delay="150">
+                <p>“Amazing full-stack work! Clean UI, fast delivery, and excellent communication.”</p>
+                <h4>— Michael Brown, Startup Founder</h4>
+            </div>
+
+            <div class="review-card" data-aos="fade-up" data-aos-delay="300">
+                <p>“Highly recommended! Great with AI integrations and workflow optimization.”</p>
+                <h4>— Arjun Verma, Tech Lead</h4>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+        <h2 data-aos="fade-up">Let’s Work Together</h2>
+
+        <form id="contactForm" data-aos="fade-up">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Email Address" required>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn-primary">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2025 SanjayDev. All rights reserved.</p>
+    </footer>
+
+    <!-- AOS Animations -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

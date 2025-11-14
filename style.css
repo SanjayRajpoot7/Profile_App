@@ -1,0 +1,291 @@
+/* -----------------------------------------------------------------
+   Global Variables
+----------------------------------------------------------------- */
+:root {
+    --primary: #64A8FF;
+    --section-bg: #eef6ff; /* light blue tint */
+    --text-dark: #1a1a1a;
+    --text-light: #555;
+    --white: #ffffff;
+
+    /* Dark mode */
+    --dark-bg: #121212;
+    --dark-card: #1e1e1e;
+    --dark-text: #e5e5e5;
+    --dark-section: #181818;
+}
+
+/* Dark Mode */
+body.dark {
+    background: var(--dark-bg);
+    color: var(--dark-text);
+}
+body.dark .navbar {
+    background: #1c1c1c;
+}
+body.dark section {
+    background: var(--dark-section);
+}
+body.dark .card,
+body.dark .service-card,
+body.dark .project-card,
+body.dark .review-card {
+    background: var(--dark-card);
+    color: var(--dark-text);
+}
+
+/* -----------------------------------------------------------------
+   Base Reset
+----------------------------------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: var(--section-bg);
+    color: var(--text-dark);
+}
+
+/* SECTION UNIVERSAL DESIGN */
+section {
+    padding: 80px 5%;
+    background: var(--white);
+    margin-bottom: 40px;
+    border-radius: 16px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+}
+
+/* -----------------------------------------------------------------
+   Navbar
+----------------------------------------------------------------- */
+.navbar {
+    padding: 20px 5%;
+    background: var(--white);
+    border-bottom: 1px solid #d9e7ff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 700;
+}
+.logo span {
+    color: var(--primary);
+}
+
+.navbar nav a {
+    margin: 0 12px;
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
+#themeToggle {
+    margin-left: 12px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 22px;
+}
+
+/* BUTTON */
+.btn-primary {
+    padding: 10px 22px;
+    border-radius: 6px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.2s;
+}
+.btn-primary:hover {
+    background: #3d8fff;
+}
+
+/* -----------------------------------------------------------------
+   Hero Section
+----------------------------------------------------------------- */
+.hero {
+    background: var(--section-bg);
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    align-items: center;
+    flex-wrap: wrap;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.hero-text {
+    flex: 1;
+}
+.hero-text h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+.hero-text p {
+    max-width: 450px;
+    color: var(--text-light);
+    margin-bottom: 20px;
+}
+
+.hero-img img {
+    width: 100%;
+    max-width: 500px;
+}
+
+/* -----------------------------------------------------------------
+   About Section
+----------------------------------------------------------------- */
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.about-photo {
+    width: 300px;
+    border-radius: 12px;
+}
+
+.about-content {
+    max-width: 500px;
+}
+.about-content p {
+    color: var(--text-light);
+    margin-bottom: 12px;
+}
+
+/* -----------------------------------------------------------------
+   Services Section
+----------------------------------------------------------------- */
+.service-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.service-card {
+    flex: 1;
+    min-width: 260px;
+    background: var(--white);
+    padding: 22px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.05);
+}
+
+/* -----------------------------------------------------------------
+   Projects Section
+----------------------------------------------------------------- */
+.project-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.project-card {
+    flex: 1;
+    min-width: 260px;
+    background: var(--white);
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.05);
+}
+
+.project-card img {
+    width: 100%;
+    max-width: 240px;
+    margin-bottom: 15px;
+}
+
+/* -----------------------------------------------------------------
+   Reviews Section
+----------------------------------------------------------------- */
+.review-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.review-card {
+    flex: 1;
+    min-width: 260px;
+    background: var(--white);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.05);
+    font-style: italic;
+}
+
+.review-card h4 {
+    text-align: right;
+    font-style: normal;
+    margin-top: 12px;
+}
+
+/* -----------------------------------------------------------------
+   Contact Section
+----------------------------------------------------------------- */
+form {
+    width: 100%;
+    max-width: 480px;
+    margin: auto;
+}
+form input, form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+form textarea {
+    height: 120px;
+}
+
+/* -----------------------------------------------------------------
+   Footer
+----------------------------------------------------------------- */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #111;
+    color: white;
+    margin-top: 40px;
+}
+
+/* -----------------------------------------------------------------
+   Responsive
+----------------------------------------------------------------- */
+@media(max-width: 900px) {
+
+    .service-card,
+    .project-card,
+    .review-card {
+        width: 100%;
+    }
+
+    .about-container {
+        text-align: center;
+        justify-content: center;
+    }
+
+    nav a {
+        display: none; /* can add mobile menu if you want */
+    }
+
+}

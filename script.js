@@ -24,15 +24,14 @@ function applyTheme(dark) {
     if (dark) document.body.classList.add('dark'); else document.body.classList.remove('dark');
     themeToggle.textContent = dark ? '☀️' : '🌙';
 }
-const isDark = localStorage.getItem('site-theme') === 'dark';
+const isDark = localStorage.getItem('site-theme') === ' dark';
 applyTheme(isDark);
 themeToggle.addEventListener('click', () => {
     const dark = !document.body.classList.contains('dark');
     applyTheme(dark);
-    localStorage.setItem('site-theme', dark ? 'dark' : 'light');
+    localStorage.setItem('site-theme', dark ? 'dark' :  'light');
 });
 
-// Simple reveal on scroll for elements with .reveal (works alongside AOS)
 const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {

@@ -164,7 +164,7 @@ section {
 .service-list {
     display: flex;
     justify-content: space-between;
-    gap: 25px;
+    gap: 27px;
     flex-wrap: wrap;
 }
 

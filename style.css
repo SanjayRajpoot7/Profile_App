@@ -88,14 +88,6 @@ section {
     font-weight: 500;
 }
 
-#themeToggle {
-    margin-left: 12px;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    font-size: 22px;
-}
-
 /* BUTTON */
 .btn-primary {
     padding: 10px 22px;
@@ -288,4 +280,104 @@ footer {
         display: none; /* can add mobile menu if you want */
     }
 
+}
+
+/* -------------------------
+   Modern animations & micro-interactions
+   ------------------------- */
+
+/* Smooth color/background transitions for theme toggle */
+body, section, .navbar, .service-card, .project-card, .review-card, .btn-primary {
+    transition: background-color 300ms ease, color 300ms ease, box-shadow 300ms ease, transform 300ms ease;
+    will-change: transform, box-shadow;
+}
+
+/* Navbar glass effect and subtle lift */
+.navbar {
+    backdrop-filter: blur(6px) saturate(1.05);
+    background: linear-gradient(180deg, rgba(255,255,255,0.82), rgba(255,255,255,0.72));
+}
+
+/* Nav link underline animation */
+.navbar nav a {
+    position: relative;
+    padding-bottom: 6px;
+    display: inline-block;
+    transition: transform 220ms ease, color 220ms ease;
+}
+.navbar nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 100%;
+    background: var(--primary);
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform 320ms cubic-bezier(.2,.9,.2,1);
+    border-radius: 3px;
+    opacity: 0.95;
+}
+.navbar nav a:hover::after,
+.navbar nav a:focus::after {
+    transform: scaleX(1);
+}
+.navbar nav a:hover { transform: translateY(-3px); }
+
+/* Buttons */
+.btn-primary {
+    box-shadow: 0 10px 30px rgba(100,168,255,0.14);
+    transition: transform 220ms cubic-bezier(.2,.9,.2,1), box-shadow 220ms ease;
+}
+.btn-primary:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 18px 44px rgba(100,168,255,0.16);
+}
+.btn-primary:active { transform: translateY(-1px) scale(0.995); }
+
+/* Cards lift */
+.service-card, .project-card, .review-card {
+    transform: translateY(0);
+}
+.service-card:hover, .project-card:hover, .review-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 22px 50px rgba(20,40,90,0.12);
+}
+
+/* Hero image subtle float */
+.hero-img img {
+    animation: float 6s ease-in-out infinite;
+    transform-origin: center;
+    will-change: transform;
+}
+@keyframes float {
+    0% { transform: translateY(0) rotate(-0.6deg); }
+    50% { transform: translateY(-12px) rotate(0.6deg); }
+    100% { transform: translateY(0) rotate(-0.6deg); }
+}
+
+/* Reveal utility for JS-driven reveals (works alongside AOS) */
+.reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 600ms cubic-bezier(.2,.9,.2,1), transform 600ms cubic-bezier(.2,.9,.2,1);
+}
+.reveal.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Focus styles for accessibility */
+a:focus, button:focus, input:focus, textarea:focus {
+    outline: 3px solid rgba(100,168,255,0.12);
+    outline-offset: 4px;
+}
+
+/* Ensure dark-mode visuals keep the same primary color accents */
+body.dark .navbar {
+    background: linear-gradient(180deg, rgba(28,28,28,0.90), rgba(28,28,28,0.82));
+}
+body.dark .btn-primary {
+    box-shadow: 0 10px 30px rgba(100,168,255,0.06);
 }
